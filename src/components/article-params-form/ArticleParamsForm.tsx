@@ -73,7 +73,6 @@ export const ArticleParamsForm = ({
 					<Text size={31} weight={800}>
 						ЗАДАЙТЕ ПАРАМЕТРЫ
 					</Text>
-					<Separator />
 
 					<Select
 						title='ШРИФТ'
@@ -105,6 +104,8 @@ export const ArticleParamsForm = ({
 						placeholder='Выберите цвет текста'
 					/>
 
+					<Separator />
+
 					<Select
 						title='ЦВЕТ ФОНА'
 						options={backgroundColors}
@@ -115,14 +116,14 @@ export const ArticleParamsForm = ({
 						placeholder='Выберите цвет фона'
 					/>
 
-					<RadioGroup
-						name='content-width'
+					<Select
 						title='ШИРИНА КОНТЕЙНЕРА'
 						options={contentWidthArr}
 						selected={draft.contentWidth}
 						onChange={(option) =>
 							setDraft((prev) => ({ ...prev, contentWidth: option }))
 						}
+						placeholder='Выберите ширину'
 					/>
 
 					<div className={styles.bottomContainer}>
